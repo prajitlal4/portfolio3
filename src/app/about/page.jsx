@@ -61,39 +61,48 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              Hello! I&apos;m Prajit Lal, a Computer Science graduate with a
+              deep-seated passion for technology, particularly in the realms of
+              AI, object-oriented programming, and mobile app development. Since
+              graduating, I&apos;ve taken on the role of a fullstack developer
+              and, over the past six months, I&apos;ve not only broadened my
+              technical skillset but also deepened my understanding of creating
+              functional and efficient digital solutions.
             </p>
+
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              One of my proudest achievements to date is the successful
+              development of a marketing website, a major project that showcased
+              my proficiency in integrating various tech stacks and tools. While
+              I&apos;ve worked on numerous small-scale projects, it&apos;s the
+              larger, more intricate tasks that truly invigorate me. My
+              aspiration is clear: to design and develop apps that simplify
+              tasks and streamline operations for businesses and individuals
+              alike.
             </p>
+
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Beyond the world of bits and bytes, fitness is a cornerstone of my
+              life. Regular visits to the gym have become more than just a
+              routine; they&apos;re a testament to my commitment to personal
+              growth, both mentally and physically. Each rep, each set
+              symbolizes my unyielding pursuit of excellence and my quest for
+              new challenges.
             </p>
+
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              In an industry that&apos;s constantly evolving, I believe in the
+              power of continuous learning. That&apos;s why, in addition to my
+              formal education, I&apos;ve actively pursued various programming
+              courses. These endeavors equip me with a versatile skill set,
+              positioning me not just as a developer but as a solo developer
+              with the ability to drive projects from ideation to execution.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink
-              href="https://twitter.com/lal_prajit74867"
-              icon={TwitterIcon}
-            >
+            <SocialLink href="https://twitter.com/PrajitLal" icon={TwitterIcon}>
               Follow on Twitter
             </SocialLink>
             <SocialLink
