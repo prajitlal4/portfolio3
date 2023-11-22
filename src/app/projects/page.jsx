@@ -12,10 +12,20 @@ const projects = [
   {
     name: 'Jestin Auto Electrics',
     description:
-      'Perth based auto electrical repair company. Written using NextJS and TailwindCSS.',
+      'Perth based auto electrical repair company. Built using NextJS and TailwindCSS.',
     link: {
       href: 'https://jestinautoelectrics.com',
       label: 'jestinautoelectrics.com',
+    },
+    logo: logoPlanetaria,
+  },
+  {
+    name: 'Cafes in Perth',
+    description:
+      'Reviewing cafes in Perth. Built using NextJS, SanityCMS and TailwindCSS.',
+    link: {
+      href: 'https://cafesinperth.com',
+      label: 'cafesinperth.com',
     },
     logo: logoPlanetaria,
   },
