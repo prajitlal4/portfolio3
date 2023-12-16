@@ -119,7 +119,6 @@ function Newsletter() {
       name="contact"
       method="POST"
       data-netlify="true"
-      action="/thank-you"
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
