@@ -1,0 +1,18 @@
+# netlify.toml
+
+[build]
+  # Directory to publish (output of the Next.js build)
+  # Use "out" for a statically generated Next.js site (using `next export`)
+  # Use ".next" for a standard Next.js site (SSR or static without `next export`)
+  publish = "out"
+
+  # Your build command
+  command = "npm run build"
+
+  # Node.js version (optional, should match the version you develop with)
+  node_version = "21.2.0"
+
+  # Environment variables (optional)
+  #[build.environment]
+    # Set to true if you want to create an optimized production build
+    #NODE_ENV = "production"
