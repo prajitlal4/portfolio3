@@ -9,7 +9,7 @@ export const metadata = {
     default: 'Prajit Lal - Fullstack Software Developer.',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
+    'I’m Prajit Lal - A software developer based in Perth, Western Australia. Check out my work and get in touch with me.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
