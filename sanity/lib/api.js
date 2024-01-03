@@ -24,3 +24,22 @@ export const getPostSlugs = async () => {
   const response = await client.fetch(query)
   return response
 }
+
+export const getPost = async (slug) => {
+  const query = `*[_type == "post" && slug.current == $slug] {
+    title,
+    "imageUrl": mainImage.asset->url,
+    "publishedAt": publishedAt,
+    body,
+    author->{
+      name,
+      "image": image.asset->url
+    },
+    categories[]->{
+      title
+    },
+  }[0]`
+  const params = { slug }
+  const response = await client.fetch(query, params)
+  return response
+}
