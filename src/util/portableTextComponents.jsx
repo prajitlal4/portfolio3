@@ -3,6 +3,7 @@ import { client } from '../../sanity/lib/api'
 import imageUrlBuilder from '@sanity/image-url'
 import Image from 'next/image'
 import { format } from 'date-fns'
+import BackButton from '@/components/BackButton'
 
 export const builder = imageUrlBuilder(client)
 
