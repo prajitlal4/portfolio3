@@ -34,7 +34,9 @@ const PortableTextComponents = ({
         </p>
       )}
       {publishedAt && (
-        <p className="font-light text-gray-500">{publishedDate}</p>
+        <p className="font-light text-gray-700 dark:text-zinc-400">
+          {publishedDate}
+        </p>
       )}
       {mainImage && (
         <Image
@@ -68,7 +70,7 @@ const PortableTextComponents = ({
                     className="rounded-2xl bg-gray-50 object-cover" // 'aspect-video' removed since width and height are set
                   />
                   {value.caption && (
-                    <figcaption className="mt-4 text-center text-sm leading-6 text-gray-500">
+                    <figcaption className="mt-4 text-center text-sm leading-6 text-gray-500 dark:text-zinc-100">
                       {value.caption}
                     </figcaption>
                   )}
@@ -78,27 +80,27 @@ const PortableTextComponents = ({
           },
           block: {
             h1: ({ children }) => (
-              <h1 className="mb-5 text-3xl font-bold tracking-tight text-gray-900 lg:text-5xl">
+              <h1 className="mb-5 text-3xl font-bold tracking-tight text-gray-900 dark:text-zinc-100 lg:text-5xl">
                 {children}
               </h1>
             ),
             h2: ({ children }) => (
-              <h2 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 lg:text-3xl">
+              <h2 className="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-zinc-100 lg:text-3xl">
                 {children}
               </h2>
             ),
             h3: ({ children }) => (
-              <h3 className="mb-3 mt-6 text-xl font-bold tracking-tight text-gray-900 lg:text-2xl">
+              <h3 className="mb-3 mt-6 text-xl font-bold tracking-tight text-gray-900 dark:text-zinc-100 lg:text-2xl">
                 {children}
               </h3>
             ),
             h4: ({ children }) => (
-              <h4 className="mb-3 text-lg font-bold tracking-tight text-gray-900 lg:text-xl">
+              <h4 className="mb-3 text-lg font-bold tracking-tight text-gray-900 dark:text-zinc-100 lg:text-xl">
                 {children}
               </h4>
             ),
             normal: ({ children }) => (
-              <p className="text-md mb-2 mt-3 leading-7 text-gray-900 lg:text-lg">
+              <p className="text-md mb-2 mt-3 leading-7 text-gray-900 dark:text-zinc-400 lg:text-lg">
                 {children}
               </p>
             ),
@@ -108,7 +110,7 @@ const PortableTextComponents = ({
       {author && (
         <div className="mt-10 flex gap-x-3">
           {updatedAt && (
-            <p className="font-light text-gray-500">
+            <p className="font-light text-gray-700 dark:text-zinc-400">
               Last updated: {updatedDate} by
             </p>
           )}
@@ -119,7 +121,9 @@ const PortableTextComponents = ({
             alt={author?.alt || 'Descriptive text for image'}
             className="h-8 w-8 rounded-full bg-gray-50 object-cover"
           />
-          <p className="font-light text-gray-500">{author.name} </p>
+          <p className="font-light text-gray-700 dark:text-zinc-400">
+            {author.name}{' '}
+          </p>
         </div>
       )}
       <hr className="mt-6 h-px border-0 bg-gray-200 dark:bg-gray-300" />
