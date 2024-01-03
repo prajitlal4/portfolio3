@@ -8,7 +8,7 @@ export default async function Blog({ params: { slug } }) {
   return (
     <Container className="">
       <div className="mt-16 lg:mt-32">
-        <div className="xl:relative">
+        <div className="">
           <div className="mx-auto max-w-3xl">
             <article>
               <BackButton />
