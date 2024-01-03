@@ -35,6 +35,8 @@ const projects = [
   },
 ]
 
+const blogPosts = []
+
 function MailIcon(props) {
   return (
     <svg
@@ -292,35 +294,67 @@ export default async function Home() {
       </Container>
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-10 lg:max-w-none lg:grid-cols-2">
-          <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-            <h2 className="mb-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-              <BriefcaseIcon className="h-6 w-6 flex-none" />
-              <span className="mb-5 ml-3">Projects</span>
-            </h2>
-            <ul
-              role="list"
-              className="mx-2 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-2"
-            >
-              {projects.map((project) => (
-                <Card as="li" key={project.name}>
-                  <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                    <Image
-                      src={project.logo}
-                      alt=""
-                      className="h-8 w-8"
-                      unoptimized
-                    />
-                  </div>
-                  <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                    <Card.Link href={project.link.href}>
-                      {project.name}
-                    </Card.Link>
-                  </h2>
-                  <Card.Description>{project.description}</Card.Description>
-                </Card>
-              ))}
-            </ul>
+          <div className="space-y-10">
+            <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+              <h2 className="mb-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                <BriefcaseIcon className="h-6 w-6 flex-none" />
+                <span className="mb-5 ml-3">Projects</span>
+              </h2>
+              <ul
+                role="list"
+                className="mx-2 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-2"
+              >
+                {projects.map((project) => (
+                  <Card as="li" key={project.name}>
+                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                      <Image
+                        src={project.logo}
+                        alt=""
+                        className="h-8 w-8"
+                        unoptimized
+                      />
+                    </div>
+                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                      <Card.Link href={project.link.href}>
+                        {project.name}
+                      </Card.Link>
+                    </h2>
+                    <Card.Description>{project.description}</Card.Description>
+                  </Card>
+                ))}
+              </ul>
+            </div>
+            <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+              <h2 className="mb-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+                <BriefcaseIcon className="h-6 w-6 flex-none" />
+                <span className="mb-5 ml-3">Blog</span>
+              </h2>
+              <ul
+                role="list"
+                className="mx-2 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-2"
+              >
+                {projects.map((project) => (
+                  <Card as="li" key={project.name}>
+                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+                      <Image
+                        src={project.logo}
+                        alt=""
+                        className="h-8 w-8"
+                        unoptimized
+                      />
+                    </div>
+                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                      <Card.Link href={project.link.href}>
+                        {project.name}
+                      </Card.Link>
+                    </h2>
+                    <Card.Description>{project.description}</Card.Description>
+                  </Card>
+                ))}
+              </ul>
+            </div>
           </div>
+
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
             <Newsletter />
