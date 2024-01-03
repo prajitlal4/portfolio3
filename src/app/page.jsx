@@ -11,6 +11,7 @@ import intelifeLogo from '@/images/logos/intelife-logo.png'
 import chickenTreatLogo from '@/images/logos/chickentreat-logo.png'
 import jestinautoelectrics from '@/images/logos/Jestin-Auto-Electrics.png'
 import cafesinperth from '@/images/logos/cafesinperth.png'
+import { getPostSlugs, getPosts } from '../../sanity/lib/api'
 
 const projects = [
   {
@@ -35,7 +36,7 @@ const projects = [
   },
 ]
 
-const blogPosts = []
+const blogPosts = await getPostSlugs()
 
 function MailIcon(props) {
   return (
@@ -327,28 +328,17 @@ export default async function Home() {
             <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
               <h2 className="mb-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                 <BriefcaseIcon className="h-6 w-6 flex-none" />
-                <span className="mb-5 ml-3">Blog</span>
+                <span className="ml-3">Blog</span>
               </h2>
               <ul
                 role="list"
-                className="mx-2 grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-2"
+                className="mx-2 grid grid-cols-1 flex-row gap-y-4 sm:grid-cols-1 lg:grid-cols-1"
               >
-                {projects.map((project) => (
-                  <Card as="li" key={project.name}>
-                    <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-                      <Image
-                        src={project.logo}
-                        alt=""
-                        className="h-8 w-8"
-                        unoptimized
-                      />
-                    </div>
-                    <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                      <Card.Link href={project.link.href}>
-                        {project.name}
-                      </Card.Link>
+                {blogPosts.map((post) => (
+                  <Card as="li" key={post.slug}>
+                    <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
+                      <Link href={`blog/${post.slug}`}>{post.title}</Link>
                     </h2>
-                    <Card.Description>{project.description}</Card.Description>
                   </Card>
                 ))}
               </ul>
