@@ -3,7 +3,7 @@ import { createClient } from "next-sanity"
 export const client = createClient({
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  useCdn: false,
+  useCdn: true,
   apiVersion: "2021-03-25",
 });
 
@@ -38,6 +38,7 @@ export const getPost = async (slug) => {
     categories[]->{
       title
     },
+    _updatedAt,
   }[0]`
   const params = { slug }
   const response = await client.fetch(query, params)
