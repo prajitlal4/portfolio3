@@ -12,6 +12,7 @@ import chickenTreatLogo from '@/images/logos/chickentreat-logo.png'
 import jestinautoelectrics from '@/images/logos/Jestin-Auto-Electrics.png'
 import cafesinperth from '@/images/logos/cafesinperth.png'
 import { getPostSlugs, getPosts } from '../../sanity/lib/api'
+import { format } from 'date-fns'
 
 const projects = [
   {
@@ -262,6 +263,10 @@ function Resume() {
   )
 }
 
+function formatPublishedDate(date) {
+  return format(new Date(date), 'MMMM dd, yyyy')
+}
+
 export default async function Home() {
   return (
     <>
@@ -326,18 +331,23 @@ export default async function Home() {
               </ul>
             </div>
             <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-              <h2 className="mb-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+              <h2 className="mb-10 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                 <BriefcaseIcon className="h-6 w-6 flex-none" />
                 <span className="ml-3">Blog</span>
               </h2>
               <ul
                 role="list"
-                className="mx-2 grid grid-cols-1 flex-row gap-y-4 sm:grid-cols-1 lg:grid-cols-1"
+                className="mx-2 grid grid-cols-1 flex-row gap-y-12 sm:grid-cols-1 lg:grid-cols-1"
               >
                 {blogPosts.map((post) => (
                   <Card as="li" key={post.slug}>
                     <h2 className="text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                      <Link href={`blog/${post.slug}`}>{post.title}</Link>
+                      <Card.Link href={`blog/${post.slug}`}>
+                        {post.title}
+                      </Card.Link>
+                      <Card.Description>
+                        {formatPublishedDate(post.publishedAt)}
+                      </Card.Description>
                     </h2>
                   </Card>
                 ))}

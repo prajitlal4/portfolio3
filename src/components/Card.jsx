@@ -38,6 +38,14 @@ Card.Link = function CardLink({ children, ...props }) {
   )
 }
 
+Card.Category = function CardDescription({ children }) {
+  return (
+    <div className="z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+      {children}
+    </div>
+  )
+}
+
 Card.Title = function CardTitle({ as, href, children }) {
   let Component = as ?? 'h2'
 
