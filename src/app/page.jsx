@@ -9,6 +9,7 @@ import logoStarbucks from '@/images/logos/starbucks.svg'
 import rediLogo from '@/images/logos/redi-logo.png'
 import intelifeLogo from '@/images/logos/intelife-logo.png'
 import chickenTreatLogo from '@/images/logos/chickentreat-logo.png'
+import train2gether from '@/images/logos/train2gether.png'
 import jestinautoelectrics from '@/images/logos/Jestin-Auto-Electrics.png'
 import cafesinperth from '@/images/logos/cafesinperth.png'
 import { getPostSlugs, getPosts } from '../../sanity/lib/api'
@@ -34,6 +35,16 @@ const projects = [
       label: 'cafesinperth.com',
     },
     logo: cafesinperth,
+  },
+  {
+    name: 'Train2Gether',
+    description:
+      'A webapp for tracking fitness progress with a group of friends. Built using Ruby on Rails and TailwindCSS.',
+    link: {
+      href: 'https://workout-logger-v2.fly.dev',
+      label: 'train2gether.app',
+    },
+    logo: train2gether,
   },
 ]
 
@@ -252,7 +263,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="https://portfolio1.syd1.cdn.digitaloceanspaces.com/PrajitLal-Resume2023.pdf"
+        href="https://portfolio1.syd1.cdn.digitaloceanspaces.com/PrajitLal-Resume2024.pdf"
         variant="secondary"
         className="group mt-6 w-full"
       >

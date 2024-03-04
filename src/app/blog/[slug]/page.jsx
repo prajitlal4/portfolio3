@@ -32,7 +32,7 @@ export default async function Blog({ params: { slug } }) {
   const post = await getPost(slug)
   return (
     <Container className="">
-      <div className="mt-16 lg:mt-32">
+      <div className="mt-8 lg:mt-8">
         <div className="">
           <div className="mx-auto max-w-3xl">
             <article>
