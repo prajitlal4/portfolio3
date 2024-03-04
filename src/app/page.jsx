@@ -302,7 +302,7 @@ export default async function Home() {
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://twitter.com/PrajitLal"
+              href="https://www.linkedin.com/in/prajit-lal-2756ba189/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
