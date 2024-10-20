@@ -5,26 +5,27 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@/components/SocialIcons'
-import logoStarbucks from '@/images/logos/starbucks.svg'
 import rediLogo from '@/images/logos/redi-logo.png'
 import intelifeLogo from '@/images/logos/intelife-logo.png'
 import chickenTreatLogo from '@/images/logos/chickentreat-logo.png'
 import train2gether from '@/images/logos/train2gether.png'
+import quicklists from '@/images/logos/QuickLists Logo Icon.png'
 import jestinautoelectrics from '@/images/logos/Jestin-Auto-Electrics.png'
 import cafesinperth from '@/images/logos/cafesinperth.png'
+import thefinanceman from '@/images/logos/the-finance-man-logo.png'
 import { getPostSlugs, getPosts } from '../../sanity/lib/api'
 import { format } from 'date-fns'
 
 const projects = [
   {
-    name: 'Jestin Auto Electrics',
+    name: 'QuickLists',
     description:
-      'Perth based auto electrical repair company. Built using NextJS and TailwindCSS.',
+      'A 30 second waitlist generator for getting your next business idea validated fast. Built using Ruby on Rails and TailwindCSS.',
     link: {
-      href: 'https://jestinautoelectrics.com',
-      label: 'jestinautoelectrics.com',
+      href: 'https://quicklists.pro',
+      label: 'quicklists.pro',
     },
-    logo: jestinautoelectrics,
+    logo: quicklists,
   },
   {
     name: 'Cafes in Perth',
@@ -37,14 +38,24 @@ const projects = [
     logo: cafesinperth,
   },
   {
-    name: 'Train2Gether',
+    name: 'Jestin Auto Electrics',
     description:
-      'A webapp for tracking fitness progress with a group of friends. Built using Ruby on Rails and TailwindCSS.',
+      'Perth based auto electrical repair company. Built using NextJS and TailwindCSS.',
     link: {
-      href: 'https://workout-logger-v2.fly.dev',
-      label: 'train2gether.app',
+      href: 'https://jestinautoelectrics.com',
+      label: 'jestinautoelectrics.com',
     },
-    logo: train2gether,
+    logo: jestinautoelectrics,
+  },
+  {
+    name: 'The Finance Man',
+    description:
+      'Finance broker based in Perth. Built using NextJS and TailwindCSS.',
+    link: {
+      href: 'https://thefinanceman.com.au',
+      label: 'thefinanceman.com.au',
+    },
+    logo: thefinanceman,
   },
 ]
 
@@ -341,7 +352,7 @@ export default async function Home() {
                 ))}
               </ul>
             </div>
-            <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+            {/* <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
               <h2 className="mb-10 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
                 <BriefcaseIcon className="h-6 w-6 flex-none" />
                 <span className="ml-3">Blog</span>
@@ -363,7 +374,7 @@ export default async function Home() {
                   </Card>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div className="space-y-10 lg:pl-16 xl:pl-24">
