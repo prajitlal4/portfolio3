@@ -277,7 +277,7 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="https://portfolio1.syd1.cdn.digitaloceanspaces.com/PrajitLal-Resume2024.pdf"
+        href="https://portfolio1.syd1.cdn.digitaloceanspaces.com/PrajitLal-Resume2024-v2.pdf"
         variant="secondary"
         className="group mt-6 w-full"
       >
