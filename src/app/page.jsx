@@ -139,65 +139,59 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
-function Newsletter() {
-  const handleFormSubmit = async (event) => {
-    event.preventDefault()
-    const formData = new FormData(event.target)
-    await fetch('/__forms.html', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-  }
+// function Newsletter() {
+//   const handleFormSubmit = async (event) => {
+//     event.preventDefault();
+//   }
 
-  return (
-    <form
-      name="contact"
-      onSubmit={handleFormSubmit}
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Get in contact with me!</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Let&apos;s discuss how I can help you achieve greatness.
-      </p>
-      <div className="mt-6 flex flex-col">
-        <input
-          id="Name"
-          name="Name"
-          type="text"
-          placeholder="Name"
-          label="Name"
-          required
-          className="min-w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-        />
-        <input
-          id="Email"
-          name="Email"
-          type="email"
-          placeholder="Email address"
-          label="Email address"
-          required
-          className="mt-2 min-w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-        />
-        <input
-          type="tel"
-          id="Phone"
-          name="Phone"
-          placeholder="Phone number"
-          label="Phone number"
-          required
-          className="mt-2 min-w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-        />
-        <Button type="submit" className="mt-5  flex-none">
-          Send
-        </Button>
-      </div>
-    </form>
-  )
-}
+//   return (
+//     <form
+//       name="contact"
+//       onSubmit={handleFormSubmit}
+//       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
+//     >
+//       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+//         <MailIcon className="h-6 w-6 flex-none" />
+//         <span className="ml-3">Get in contact with me!</span>
+//       </h2>
+//       <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
+//         Let&apos;s discuss how I can help you achieve greatness.
+//       </p>
+//       <div className="mt-6 flex flex-col">
+//         <input
+//           id="Name"
+//           name="Name"
+//           type="text"
+//           placeholder="Name"
+//           label="Name"
+//           required
+//           className="min-w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+//         />
+//         <input
+//           id="Email"
+//           name="Email"
+//           type="email"
+//           placeholder="Email address"
+//           label="Email address"
+//           required
+//           className="mt-2 min-w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+//         />
+//         <input
+//           type="tel"
+//           id="Phone"
+//           name="Phone"
+//           placeholder="Phone number"
+//           label="Phone number"
+//           required
+//           className="mt-2 min-w-full flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
+//         />
+//         <Button type="submit" className="mt-5  flex-none">
+//           Send
+//         </Button>
+//       </div>
+//     </form>
+//   )
+// }
 
 function Role({ role }) {
   let startLabel =
@@ -388,7 +382,7 @@ export default async function Home() {
 
           <div className="space-y-10 lg:pl-16 xl:pl-24">
             <Resume />
-            <Newsletter />
+            {/* <Newsletter /> */}
           </div>
         </div>
       </Container>
