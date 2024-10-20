@@ -140,11 +140,20 @@ function SocialLink({ icon: Icon, ...props }) {
 }
 
 function Newsletter() {
+  const handleFormSubmit = async (event) => {
+    event.preventDefault()
+    const formData = new FormData(event.target)
+    await fetch('/__forms.html', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+  }
+
   return (
     <form
       name="contact"
-      method="POST"
-      data-netlify="true"
+      onSubmit={handleFormSubmit}
       className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
     >
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
